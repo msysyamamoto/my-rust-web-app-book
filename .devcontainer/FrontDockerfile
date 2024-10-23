@@ -1,0 +1,12 @@
+FROM node:lts
+
+USER node
+WORKDIR /home/node
+
+RUN git clone https://github.com/rust-web-app-book/rusty-book-manager-template.git \
+    && cd rusty-book-manager-template/frontend \
+    && npm install
+
+WORKDIR /home/node/rusty-book-manager-template/frontend
+
+ENTRYPOINT [ "npm", "run", "dev" ]

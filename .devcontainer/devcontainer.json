@@ -1,0 +1,25 @@
+{
+	"name": "Rust",
+	"dockerComposeFile": "./compose.yaml",
+	"service": "app",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"lldb.executable": "/usr/bin/lldb",
+				"files.watcherExclude": {
+					"**/target/**": true
+				},
+				"rust-analyzer.checkOnSave.command": "clippy"
+			},
+			"extensions": [
+				"vadimcn.vscode-lldb",
+				"mutantdino.resourcemonitor",
+				"tamasfe.even-better-toml",
+				"rust-lang.rust-analyzer"
+			]
+		}
+	},
+	"overrideCommand": true,
+	"workspaceFolder": "/home/vscode/workspace",
+	"remoteUser": "vscode"
+}
